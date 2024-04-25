@@ -101,8 +101,7 @@ class MarkdownParseBody extends StatelessWidget {
         selectable: selectable,
         shrinkWrap: shrinkWrap,
         syntaxHighlighter: syntaxHighlighter,
-        bulletBuilder: bulletBuilder ??
-            (int number, BulletStyle style) {
+        bulletBuilder: bulletBuilder ?? (MarkdownBulletParameters markdownBulletParameters) {
               double? fontSize =
                   Theme.of(context).textTheme.bodyMedium?.fontSize;
               return Text(
